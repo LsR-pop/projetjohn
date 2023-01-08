@@ -1,10 +1,10 @@
 import "@/globals.css"
-import ContextProvider from "@/components/contextprovider"
+import ContextProvider from "@/components/ContextProvider"
 
-export default function App({Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   return (
-  <ContextProvider>
-    <Component {...pageProps} />
-  </ContextProvider>
+    <ContextProvider>
+      <Component {...pageProps} />
+    </ContextProvider>
   )
 }
