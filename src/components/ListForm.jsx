@@ -8,11 +8,11 @@ import { Form, Formik } from "formik"
 import * as yup from "yup"
 
 const defaultValidationSchema = yup.object().shape({
-    listname: listnameValidator.required(),
+    name: listnameValidator.required(),
 })
 
 const defaultInitialValues = {
-  listname: "",
+  name: "",
 }
 
 const ListForm = (props) => {
@@ -30,7 +30,7 @@ const ListForm = (props) => {
       validationSchema={validationSchema}
     >
       <Form className={classNames("flex flex-col gap-4 p-4", className)}>
-        <FormField name="listname" label="Listname" />
+        <FormField name="name" label="Listname" />
         <Button type="submit" className="mt-8">
           SAVE
         </Button>

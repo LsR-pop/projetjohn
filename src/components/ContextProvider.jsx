@@ -21,7 +21,7 @@ export const Context = createContext()
 export const useContext = () => useNativeContext(Context)
 
 const ContextProvider = (props) => {
-  const [nextId, setNextId] = useState(2)
+  const [nextId, setNextId] = useState(9)
   const [lists, setList] = useState(initialLists)
   const getNextId = useCallback(() => {
     setNextId(nextId + 1)
