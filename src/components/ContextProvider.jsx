@@ -8,11 +8,11 @@ import {
 const initialLists = [
   {
     id: 1,
-    name: "test",
+    name: "task1",
   },
   {
     id: 2,
-    name: "test2",
+    name: "task2",
   },
 ]
 

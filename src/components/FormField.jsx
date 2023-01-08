@@ -1,14 +1,6 @@
-import ColorInput from "@/components/ColorInput.jsx"
 import Input from "@/components/Input.jsx"
 import classNames from "classnames"
 import { useField } from "formik"
-
-const ColorField = (props) => (
-  <span className="flex gap-2">
-    <ColorInput {...props} />
-    <Input {...props} type="text" className="grow" />
-  </span>
-)
 
 const FormField = (props) => {
   const {

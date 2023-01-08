@@ -1,9 +1,6 @@
-import Button from "@/components/Button.jsx"
 import { useContext } from "@/components/ContextProvider.jsx"
-import Link from "@/components/Link.jsx"
-import Page from "@/components/Page.jsx"
-import { TrashIcon } from "@heroicons/react/24/solid"
-import Head from "next/head"
+import onSubmit from "@/pages/list/createList.jsx" 
+import Link from "next/link"
 import { useCallback } from "react"
 
 const IndexPage = () => {
@@ -25,7 +22,7 @@ const IndexPage = () => {
       <header className="flex p-4 justify-between items-center border-b">
         <h1 className="text-2xl font-bold italic">TASK LIST</h1>
         <nav>
-          <ul className="flex gap-4"> Button</ul>
+          <Link href="/list/createList" className="flex gap-4"> Create List</Link>
         </nav>
       </header>
       {lists.map((list, index) => (
