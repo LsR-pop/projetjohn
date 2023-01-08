@@ -18,7 +18,7 @@ export const useContext = () => useNativeContext(Context)
 
 const ContextProvider = (props) => {
   const [nextId, setNextId] = useState(2)
-  const [lists, setLists] = useState(initialLists)
+  const [lists, setList] = useState(initialLists)
   const getNextId = useCallback(() => {
     setNextId(nextId + 1)
 
@@ -37,11 +37,11 @@ const ContextProvider = (props) => {
     [getNextId]
   )
   const deleteList = useCallback(
-    (listId) => setLists((lists) => lists.filter(({ id }) => id !== listId)),
+    (listId) => setList((lists) => lists.filter(({ id }) => id !== listId)),
     []
   )
   const updateList = useCallback((updatedList) => {
-    setLists((lists) =>
+    setList((lists) =>
       lists.map((list) => (list.id === updatedList.id ? updatedList : list))
     )
   }, [])
